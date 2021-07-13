@@ -1,0 +1,78 @@
+.tickContainer {
+  position:  relative;
+}
+
+.marker {
+  position: absolute;
+  /*font-size: 4.5vw;*/
+  font-size: 9vw; /* Browsers that do not support "MIN () - MAX ()" and "Clamp ()" functions will take this value.*/
+  font-size: max(32px, min(9vw, 85px)); /* Browsers that do not support the "clamp ()" function will take this value. */
+  font-size: clamp(32px, 9vw, 85px);
+  top: -.75em;
+  left: -.5em;
+}
+
+.smileyContainer {
+    position: relative;
+}
+
+.horizontalLine {
+  display: flex;
+  justify-content: space-between;
+  position: absolute;
+  left: 2.25%;
+  list-style:none;
+  width:100%;
+  margin: 7.5vw 0;
+  padding:0 0;
+  display:block;
+  border-bottom:2px solid #efefef;
+}
+
+.horizontalLine:last-of-type {border-bottom:0;}
+
+.horizontalLine:before {
+    content: '';
+    position:relative;
+    top:0;
+    left:0%;
+    display:block;
+    background-color:#222;
+    height:4px;
+    width:95%;
+}
+
+.horizontalLine li {
+  display:inline-block;
+  width:4.75%;
+  text-align:center;
+  vertical-align: top;
+}
+
+.verticalTick {
+    border-left: solid 2px #222;
+    height: 6vw;
+    width: 1px;
+    margin: -3vw 0px;
+}
+
+.horizontalLine li .smiley {
+    font-size: 3vw;
+    position: absolute;
+    top: -9vw;
+    left: -0.5em;
+}
+
+.tickLabel {
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    left: -50%;
+    top: 4.5vw;
+}
+
+.word-cloud {
+    margin: 17vw auto 0 auto;
+    width: 400px;
+    height: 300px;
+}
